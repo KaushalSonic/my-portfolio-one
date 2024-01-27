@@ -1,0 +1,31 @@
+/* Predefined Color Pallete */
+
+:root{
+    --primary-color: #E50914;
+    --primary-color-hover: #c70e17;
+    --secondary-color: #000;
+    --primary-text-color: #fff;
+    --secondary-text-color: #b3b3b3;
+    --acent-color: #232323;
+}
+
+
+html{
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    background-color: orange;
+}
+
+/* Hero Component Starts ... */
