@@ -6,26 +6,50 @@
     <title>Portflio Website</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="main.js" defer></script>
+
 </head>
 <body>
-    <div class="hero-layout" id="Home">
-        <div class="hero-component">
-            <header>
-                <div class="logo">
-                    <h2>LOGO</h2>
-                    <!-- <img src="" alt="Header-Logo"> -->
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Project">Project</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <header>
+        <div class="logo">
+            <h2>Portfolio</h2>
+            <!-- <img src="" alt="Header-Logo"> -->
         </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#Home" class="active1">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-component" id="Home">
+        <div class="hero-content">
+            <aside class="context">
+                <h2>Hello It's Me</h2>
+                <h2 id="my-name">Kaushal Kishore</h2>
+                <h2>And I'm <span id="textline"></span></h2>
+                <p class="hero-desc"> Hi there, I'm passionate FrontEnd Developer and GCP Cloud Enthusiast.</p>
+                <div class="link-box">
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/kaushal-kishore-b373111a8/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/KaushalSonic" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://discordapp.com/users/1059880575202242792/" target="_blank"><i class='bx bxl-discord-alt'></i></a>
+                    </div>
+                    <a href="./assets/Resume.pdf" download="Resume.pdf" class="cv-button">Download CV</a>
+                </div>
+            </aside>
+            <aside class="profile-section">
+                <div class="profile-pic">
+                    <img src="./assets/profile.png" alt="profile">
+                </div>
+            </aside>
+            
+        </div>
+    </div>        
     
 </body>
 </html>
