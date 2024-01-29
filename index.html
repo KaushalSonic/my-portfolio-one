@@ -12,19 +12,26 @@
 
 </head>
 <body>
+
+    <!-- Landing Component Starts -->
+
     <header>
         <div class="logo">
             <h2>Portfolio</h2>
             <!-- <img src="" alt="Header-Logo"> -->
         </div>
-        <nav>
-            <ul>
-                <li><a href="#Home" class="active1">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Project">Project</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navlinks">
+            <nav>
+                <ul>
+                    <li><a href="#Home" class="active1">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mode" onclick="colorMode()"><i class='bx bxs-sun'></i></div>
+            <div class="menu"><i class='bx bx-menu'></i></div>
+        </div>    
     </header>
     <div class="hero-component" id="Home">
         <div class="hero-content">
@@ -47,9 +54,12 @@
                     <img src="./assets/profile.png" alt="profile">
                 </div>
             </aside>
-            
         </div>
-    </div>        
+    </div>
+
+    <!-- Landing Component Ends -->
+
+    <div class="section-divider"></div>        
     
 </body>
 </html>

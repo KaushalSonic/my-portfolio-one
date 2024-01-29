@@ -8,6 +8,15 @@
     --border2: blueviolet;
     --neutral: #040d12;
     --text-color: #FFF;
+    --acent-color: #232323;
+}
+
+.light-mode{
+    --neutral: #DCFFB7;
+    --text-color: #000;
+    --acent-color: #E6A4B4;
+    --border1: #000;
+    --border2: blueviolet;
 }
 
 
@@ -36,14 +45,19 @@ header{
     top: 0;
     width: 100%;
     padding: 0.8rem 9rem;
-    border-bottom:1px solid #232323;
+    border-bottom:1px solid var(--acent-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--neutral);
     z-index: 10;
 }
 .logo{
     color: var(--text-color) ;
+}
+.navlinks{
+    /* border: 1px solid #FFF; */
+    display: flex;
 }
 header nav{
     /* border: 1px solid var(--border2); */
@@ -55,7 +69,7 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    margin: 0 1.5rem;
+    margin-right: 3rem;
 }
 nav ul li a{
     font-size: 1.2rem;
@@ -64,6 +78,23 @@ nav ul li a{
     color: var(--text-color);
 }
 nav a:hover, nav a.active1{
+    color: var(--primary-color);
+}
+.mode{
+    color: var(--text-color);
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.menu{
+    display: none;
+}
+.mode:hover{
+    color: var(--primary-color);
+}
+.menu:hover{
     color: var(--primary-color);
 }
 
@@ -104,6 +135,7 @@ nav a:hover, nav a.active1{
 }
 .link-box{
     display: inline-block;
+    text-align: left;
 }
 .social-media{
     display: flex;
@@ -182,3 +214,101 @@ nav a:hover, nav a.active1{
     }
 }
 
+
+.section-divider{
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--acent-color);
+}
+
+
+/* For Making Responsiveness Layouts */
+
+@media screen and (max-width: 1279px){
+    header{
+        padding: 0.8rem 2rem;
+    }
+    .hero-component{
+        padding: 0rem 2rem;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .hero-component{
+        height: 29rem;
+    }
+    nav ul li{
+        margin-right: 1.5rem;
+    }
+    .profile-pic{
+        width: 10rem;
+        height: 10rem;
+    }
+    .context h2{
+        font-size: 1.2rem;
+    }
+    .context #my-name{
+        font-size: 2rem;
+    }
+    .context p{
+        font-size: 0.9rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px){
+    header{
+        padding: 0.8rem 1rem;
+    }
+    .navlinks nav{
+        display: none;
+    }
+    .mode{
+        font-size: 2.2rem;
+    }
+    .menu{
+        color: var(--text-color);
+        display: grid;
+        place-items: center;
+        font-size: 2.8rem;
+        cursor: pointer;
+        transition: color 0.5s ease;
+        margin-left: 1rem;
+    }
+    .hero-component{
+        height: 36.7rem;
+        padding: 0 1rem;
+        display: block;
+    }
+    .hero-content{
+        flex-direction: column;
+    }
+    .context{
+        width: auto;
+        /* border: 1px solid var(--border1); */
+        order: 1;
+        text-align: center;
+    }
+    .profile-section{
+        width: auto;
+        order: 0;
+    }
+    .profile-pic{
+        margin: 4rem 0;
+    }
+    .context h2{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .context #my-name{
+        font-size: 2rem;
+    }
+    .context p{
+        font-size: 0.7rem;
+    }
+    .link-box{
+        padding-left: 1.5rem;
+    }
+    
+}
