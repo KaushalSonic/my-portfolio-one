@@ -238,7 +238,7 @@ nav a:hover, nav a.active1{
 .about-container{
     width: 100%;
     display: flex;
-    /* border: 1px solid var(--border1); */
+    border: 1px solid var(--border1);
 }
 .about-container .profile-section .about-profile{
     animation: none;
@@ -265,6 +265,106 @@ nav a:hover, nav a.active1{
     color: var(--primary-color);
 }
 
+/* About Component Ends ... */
+
+/* ---------------------------------------- */
+
+/* Project Component Starts */
+
+.project-layout{
+    width: 100%;
+    height: 38rem;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--neutral2);
+    border: 1px dashed var(--border2);
+
+}
+.project-component{
+    width: 100%;
+    border: 1px solid var(--border1);
+    text-align: center;
+}
+.project-component h1{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+.project-container{
+    margin-top: 4rem;
+    width: 100%;
+    height: 22rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    border: 1px solid var(--border2);
+}
+.project-container .project{
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 2px var(--neutral);
+    border: 2px solid var(--acent-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border 0.5s ease;
+}
+.project:hover{
+    border: 2px solid var(--primary-color);
+}
+.project img{
+    object-fit: cover;
+    width: 100%;
+}
+.project .project-details{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--neutral);
+    display: none;
+}
+.project:hover .project-details{
+    display: block;
+}
+.project-details{
+    padding: 1rem;
+    text-align: center;
+}
+.project-details h2{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.project-details p{
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    line-height: 1.05rem;
+}
+.project-details .project-btn{
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+.project-btn:hover{
+    box-shadow: 0px 0px 5px 2px  var(--primary-color);
+}
+.project:nth-child(2) img{
+    transform: scale(1.2);
+}
+.project:nth-child(5) .project-btn{
+    margin-top: 2rem;
+}
+
+/* Project Component Ends */
+
+/* ------------------------------------------- */
+
 
 /* For Making Responsiveness Layouts */
 
@@ -279,7 +379,14 @@ nav a:hover, nav a.active1{
     }
 
     /* About Component */
+    
     .about-layout{
+        padding: 0 2rem;
+    }
+
+    /* Project Component */
+
+    .project-layout{
         padding: 0 2rem;
     }
     
@@ -321,6 +428,40 @@ nav a:hover, nav a.active1{
     }
     .about-context p{
         font-size: 0.9rem;
+    }
+
+    /* Project Component */
+
+    .project-layout{
+        height: 55rem;
+    }
+    .project-component h1{
+        font-size: 2rem;
+    }
+    .project-container{
+        margin-top: 3rem;
+        height: 40rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1.2rem;
+        column-gap: 1.2rem;
+    }
+    .project{
+        height: 24vw;
+    }
+    .project-details{
+        padding: 1.5rem;
+    }
+    .project-details h2{
+        font-size: 1.35rem;
+    }
+    .project-details p{
+        font-size: 0.8rem;
+        margin-top: 0.85rem;
+    }
+    .project:nth-child(1) .project-btn{
+        margin-top: 2rem;
     }
 }
 
@@ -375,6 +516,7 @@ nav a:hover, nav a.active1{
     }
     .context p{
         font-size: 0.8rem;
+        line-height: 1rem;
     }
     .link-box{
         padding-left: 1.5rem;
@@ -390,7 +532,7 @@ nav a:hover, nav a.active1{
         display: none;
     }
     .about-container{
-        margin: 4rem 0;
+        margin: 3rem 0;
     }
     .about-context{
         text-align: center;
@@ -404,6 +546,48 @@ nav a:hover, nav a.active1{
     }
     .about-context p{
         font-size: 0.8rem;
+        line-height: 1rem;
+    }
+     
+    /* Project Component */
+
+    .project-layout{
+        padding: 0 1.5rem;
+        height: auto;
+    }
+    .project-component{
+        margin: 3rem 0;
+    }
+    .project-container{
+        margin-top: 3rem;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 2.5rem;
+        column-gap: 0rem;
+    }
+    .project{
+        height: 45vw;
+    }
+    .project-details{
+        padding: 1rem;
+    }
+    .project-details h2{
+        font-size: 1.35rem;
+    }
+    .project-details p{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    .project:nth-child(1) .project-btn{
+        margin-top: 0.75rem;
+    }
+    .project:nth-child(5) .project-btn{
+        margin-top: 1.75rem;
+    }
+    .project .project-btn{
+        margin-top: 0.75rem;
     }
 
     
