@@ -4,23 +4,22 @@
 
 :root{
     --primary-color: #FF9800;
-    --border1: #FFF;
-    --border2: blueviolet;
     --neutral: #040d12;
     --neutral2: #111111;
     --text-color: #FFF;
     --acent-color: #232323;
+    --form-color1: #040d12;
+    --form-color2: #232323;
 }
 
 .light-mode{
     --primary-color: #7743DB;
-    /* --primary-color: #864AF9; */
     --neutral: #FFF8E3;
     --neutral2: #DCFFB7;
     --text-color: #000;
     --acent-color: #E6A4B4;
-    --border1: #000;
-    --border2: blueviolet;
+    --form-color1: #DCFFB7;
+    --form-color2: #FFF8E3;
 }
 
 
@@ -60,11 +59,9 @@ header{
     color: var(--text-color) ;
 }
 .navlinks{
-    /* border: 1px solid #FFF; */
     display: flex;
 }
 header nav{
-    /* border: 1px solid var(--border2); */
     display: grid;
     place-items: center;
 }
@@ -84,7 +81,7 @@ nav ul li a{
 nav a:hover, nav a.active1{
     color: var(--primary-color);
 }
-.mode{
+#mode{
     color: var(--text-color);
     display: grid;
     place-items: center;
@@ -92,14 +89,17 @@ nav a:hover, nav a.active1{
     cursor: pointer;
     transition: color 0.5s ease;
 }
-.menu{
+#menu{
     display: none;
 }
-.mode:hover{
+#mode:hover{
     color: var(--primary-color);
 }
-.menu:hover{
+#menu:hover{
     color: var(--primary-color);
+}
+#sidebar{
+    display: none;
 }
 
 .hero-component{
@@ -225,13 +225,13 @@ nav a:hover, nav a.active1{
 
 .about-layout{
     width: 100%;
-    height: 38rem;
     padding: 0 9rem;
     display: grid;
     place-items: center;
     background-color: var(--neutral2);
 }
 .about-container{
+    margin: 3rem 0;
     width: 100%;
     display: flex;
 }
@@ -271,7 +271,6 @@ nav a:hover, nav a.active1{
 
 .project-layout{
     width: 100%;
-    height: 38rem;
     padding: 0 9rem;
     display: grid;
     place-items: center;
@@ -279,6 +278,7 @@ nav a:hover, nav a.active1{
 
 }
 .project-component{
+    margin: 3rem 0;
     width: 100%;
     text-align: center;
 }
@@ -288,7 +288,7 @@ nav a:hover, nav a.active1{
     margin: 0;
 }
 .project-container{
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 100%;
     height: 22rem;
     display: grid;
@@ -360,6 +360,87 @@ nav a:hover, nav a.active1{
 
 /* ------------------------------------------- */
 
+/* Contact Component Starts */
+
+.contact-layout{
+    width: 100%;
+    padding: 0 9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--form-color1);
+}
+.contact-component{
+    margin: 4rem 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.contact-component h1{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+.form-content{
+    margin-top: 3rem;
+    width: 60%;
+    text-align: center;
+}
+form input, form textarea{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    background-color: var(--form-color2);
+    transition: border 0.1s ease;
+
+}
+form input:focus, form textarea:focus{
+    border: 1px solid var(--primary-color);
+}
+form textarea{
+    padding: 1rem;
+    resize: none;
+    height: 10rem;
+}
+form .form-btn{
+    padding: 0.8rem 3rem;
+}
+.h-captcha{
+    text-align: center;
+}
+
+/* Project Component Ends */
+
+/* ------------------------------------------- */
+
+/* Footer Component Starts */
+
+footer{
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+    background-color: var(--neutral);
+}
+footer p{
+    font-size: 0.8rem;
+    color: var(--text-color);   
+}
+footer h3{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+footer span{
+    color: var(--primary-color);
+}
+
+/* Footer Component Ends */
+
+/* ------------------------------------------- */
 
 /* For Making Responsiveness Layouts */
 
@@ -382,6 +463,12 @@ nav a:hover, nav a.active1{
     /* Project Component */
 
     .project-layout{
+        padding: 0 2rem;
+    }
+
+    /* Contact Component */
+
+    .contact-layout{
         padding: 0 2rem;
     }
     
@@ -412,9 +499,6 @@ nav a:hover, nav a.active1{
 
     /* About Component */
 
-    .about-layout{
-        height: 29rem;
-    }
     .about-context h1{
         font-size: 2rem;
     }
@@ -427,9 +511,6 @@ nav a:hover, nav a.active1{
 
     /* Project Component */
 
-    .project-layout{
-        height: 55rem;
-    }
     .project-component h1{
         font-size: 2rem;
     }
@@ -458,6 +539,16 @@ nav a:hover, nav a.active1{
     .project:nth-child(1) .project-btn{
         margin-top: 1rem;
     }
+
+    /* Contact Component */
+
+    .contact-component h1{
+        font-size: 2rem;
+    }
+    .form-content{
+        width: 65%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -469,10 +560,10 @@ nav a:hover, nav a.active1{
     .navlinks nav{
         display: none;
     }
-    .mode{
+    #mode{
         font-size: 2.2rem;
     }
-    .menu{
+    #menu{
         color: var(--text-color);
         display: grid;
         place-items: center;
@@ -480,6 +571,31 @@ nav a:hover, nav a.active1{
         cursor: pointer;
         transition: color 0.5s ease;
         margin-left: 1rem;
+    }
+    #sidebar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-top: 4.4rem;
+        width: 100%;
+        padding: 1rem 0;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        z-index: 10;
+    }
+    #sidebar nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #sidebar nav ul li{
+        margin: 0.7rem 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    #sidebar .active1{
+        color: var(--text-color);
     }
     .hero-component{
         height: 36.7rem;
@@ -525,9 +641,6 @@ nav a:hover, nav a.active1{
     .about-container .profile-section{
         display: none;
     }
-    .about-container{
-        margin: 3rem 0;
-    }
     .about-context{
         text-align: center;
         width: auto;
@@ -548,9 +661,6 @@ nav a:hover, nav a.active1{
     .project-layout{
         padding: 0 1.5rem;
         height: auto;
-    }
-    .project-component{
-        margin: 3rem 0;
     }
     .project-container{
         margin-top: 3rem;
@@ -575,13 +685,31 @@ nav a:hover, nav a.active1{
         margin-top: 0.5rem;
     }
     .project:nth-child(1) .project-btn{
-        margin-top: 0.75rem;
+        margin-top: 1rem;
     }
     .project:nth-child(5) .project-btn{
         margin-top: 1.75rem;
     }
     .project .project-btn{
         margin-top: 0.75rem;
+    }
+
+    /* Contact Component */
+
+    .contact-layout{
+        padding: 0 1.5rem;
+    }
+    .contact-component{
+        margin: 3rem 0;
+    }
+    .form-content{
+        width: 100%;
+    }
+
+    /* Footer Component */
+
+    .footer h3{
+        font-size: 0.8rem;
     }
 }
 
