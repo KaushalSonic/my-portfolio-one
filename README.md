@@ -17,6 +17,7 @@
 * Added blur-effect menu drawer in mobile view.
 * Added working contact form by Web3Form API (User can message me through this contact form).
 * Added reCaptcha in form.
+* Added Favicon.
 * Added Responsiveness across all devices.
 ### **<a href="https://my-portfolio-one-one.vercel.app/" target="_blank">Live Link :rocket:</a>**
 
