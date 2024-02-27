@@ -353,11 +353,8 @@ nav a:hover, nav a.active1{
 .project-btn:hover{
     box-shadow: 0px 0px 5px 2px  var(--primary-color);
 }
-.project:nth-child(2) img{
+.project:nth-child(3) img{
     transform: scale(1.2);
-}
-.project:nth-child(5) .project-btn{
-    margin-top: 2rem;
 }
 
 /* Project Component Ends */
@@ -539,8 +536,8 @@ footer span{
         font-size: 0.8rem;
         margin-top: 0.85rem;
     }
-    .project:nth-child(1) .project-btn{
-        margin-top: 1rem;
+    .project:nth-child(2) .project-btn{
+        margin-top: 2rem;
     }
 
     /* Contact Component */
@@ -693,12 +690,6 @@ footer span{
     .project-details p{
         font-size: 0.8rem;
         margin-top: 0.5rem;
-    }
-    .project:nth-child(1) .project-btn{
-        margin-top: 1rem;
-    }
-    .project:nth-child(5) .project-btn{
-        margin-top: 1.75rem;
     }
     .project .project-btn{
         margin-top: 0.75rem;
