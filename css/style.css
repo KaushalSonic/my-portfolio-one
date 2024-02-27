@@ -82,18 +82,22 @@ nav a:hover, nav a.active1{
     color: var(--primary-color);
 }
 #mode{
-    color: var(--text-color);
     display: grid;
     place-items: center;
-    font-size: 1.8rem;
     cursor: pointer;
-    transition: color 0.5s ease;
+}
+#mode .modeIcon{
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--text-color);
+    object-fit: cover;
+    transition: fill 0.5s ease;
+}
+#mode .modeIcon:hover{
+    fill: var(--primary-color);
 }
 #menu{
     display: none;
-}
-#mode:hover{
-    color: var(--primary-color);
 }
 #menu:hover{
     color: var(--primary-color);
@@ -559,8 +563,9 @@ footer span{
     .navlinks nav{
         display: none;
     }
-    #mode{
-        font-size: 2.2rem;
+    #mode .modeIcon{
+        width: 2.2rem;
+        height: 2.2rem;
     }
     #menu{
         color: var(--text-color);

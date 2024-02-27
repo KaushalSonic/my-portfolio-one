@@ -8,16 +8,24 @@ var typed = new Typed('#textline', {
     loop: true
   });
 
-// For Toggling Light Mode
+// For Toggling dark mode to light Mode and vice versa with changing icons
 function colorMode(){
   let mode = document.body;
   mode.classList.toggle("light-mode");
+  if(mode.classList.contains("light-mode")){
+    document.querySelector("#sun").style.display = "none";
+    document.querySelector("#moon").style.display = "block";
+  }
+  else{
+    document.querySelector("#sun").style.display = "block";
+    document.querySelector("#moon").style.display = "none";
+  }
 }
 
 // For changing Mode Icon (Not Working)
-function modeIcon(x){
-  x.classList.toggle("bxs-moon");
-}
+// function modeIcon(x){
+//   x.classList.toggle("bxs-moon");
+// }
 
 // For expanding more details in about section (Always use ID instead of class for display block)
 function details(){
